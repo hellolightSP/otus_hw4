@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #show disk
-echo 'lsblk'
 lsblk
 
 #Add kernel module zfs

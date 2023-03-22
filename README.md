@@ -33,7 +33,7 @@ CentOS-7-x86_64-Vagrant-2004_01 (virtualbox, 0)
 ```
 vagrant up > otus_hw4_xfs
 ```
-**Скрипт с выполнением ДЗ, и вывод всех команд в приложенных файлах: [config_zfs.sh](https://github.com/hellolightSP/otus_hw4/blob/main/config_zfs.sh), [install_packages.sh](https://github.com/hellolightSP/otus_hw4/blob/main/install_packages.sh), [otus_hw4_xfs](https://github.com/hellolightSP/otus_hw4/blob/main/otus_hw4_xfs)**
+**Скрипты с выполнением ДЗ, и вывод всех команд в приложенных файлах: [config_zfs.sh](https://github.com/hellolightSP/otus_hw4/blob/main/config_zfs.sh), [install_packages.sh](https://github.com/hellolightSP/otus_hw4/blob/main/install_packages.sh), [otus_hw4_xfs](https://github.com/hellolightSP/otus_hw4/blob/main/otus_hw4_xfs)**
 
 - show disk
 ```

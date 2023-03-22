@@ -113,3 +113,8 @@ find /otus/test -name "secret_message"
 
 cat /otus/test/task1/file_mess/secret_message
 ```
+**Примечание**
+
+Модули ядра не хотят добавляться без перезагрузки ОС ```modprobe zfs``` поэтому скрипт разделил на две части:
+1. [install_packages.sh](https://github.com/hellolightSP/otus_hw4/blob/main/install_packages.sh) устанавливает необходимые пакеты, перезагружаем ОС ``` box.vm.provision "shell", reboot: true ```
+2. [config_zfs.sh](https://github.com/hellolightSP/otus_hw4/blob/main/config_zfs.sh) конфигурируем zfs

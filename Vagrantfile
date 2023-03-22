@@ -53,7 +53,6 @@ MACHINES = {
   },
 }
 
-
 Vagrant.configure("2") do |config|
   MACHINES.each do |boxname, boxconfig|
       config.vm.define boxname do |box|
@@ -76,25 +75,9 @@ Vagrant.configure("2") do |config|
                 end
              end
           end
-        box.vm.provision "shell", inline: <<-SHELL
-          #install zfs repo
-          yum install -y http://download.zfsonlinux.org/epel/zfs-release.el7_8.noarch.rpm
-          #import gpg key 
-          rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
-          #install DKMS style packages for correct work ZFS
-          yum install -y epel-release kernel-devel zfs
-          #change ZFS repo
-          yum-config-manager --disable zfs
-          yum-config-manager --enable zfs-kmod
-          yum install -y zfs
-          #Add kernel module zfs
-          #modprobe zfs
-          #install wget
-          yum install -y wget
-      SHELL
+        box.vm.provision "shell", path: "install_packages.sh"
         box.vm.provision "shell", reboot: true
         box.vm.provision "shell", path: boxconfig[:provision]
     end
   end
 end
-
